@@ -25,6 +25,6 @@ include("operations.jl")
 include("utility.jl")
 
 # Now, export all the necessary functions and types
-export +, *, -, exp, tanh, inv, show, Node, backward!
+export +, *, -, >, /, max, min, exp, tanh, inv, show, Node, backward!
 
 end # module MiniGrad
