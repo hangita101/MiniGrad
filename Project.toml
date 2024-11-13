@@ -1,0 +1,10 @@
+name = "MiniGrad"
+uuid = "b23946e7-c2ac-46e1-b361-d76c0ea7535c"
+authors = ["root "]
+version = "0.1.0"
+
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+Test = "1.11.0"
