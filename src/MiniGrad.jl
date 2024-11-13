@@ -23,8 +23,9 @@ end
 
 include("operations.jl")
 include("utility.jl")
+include("tensor.jl")
 
 # Now, export all the necessary functions and types
-export +, *, -, >, /, max, min, exp, tanh, inv, show, Node, backward!
+export +, *, -, >, /, max, min, exp, tanh, inv, show, Node, backward!,Tensor
 
 end # module MiniGrad

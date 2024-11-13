@@ -18,7 +18,7 @@ import Base: max
 Base.promote_rule(::Type{<:Node}, ::Type{T}) where {T<:Number} = Node
 
 function show(io::IO, node::Node)
-    println(io, "Value: ", node.data)
+    print(io, node.data," ")
 end
 
 function +(a::Node, b::Node)
@@ -115,7 +115,7 @@ function ^(a::Node, b::Number)
     function backward()
         a.grad += (b * a.data^(b - 1)) * out.grad
     end
-    a._backward = backward
+    out._backward = backward
     return out
 end
 
@@ -125,7 +125,7 @@ function ^(a::Node, b::Integer)
     function backward()
         a.grad += (b * a.data^(b - 1)) * out.grad
     end
-    a._backward = backward
+    out._backward = backward
     return out
 end
 
